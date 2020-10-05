@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/programa.dir/src/Arrays.cpp.o  -o programa 

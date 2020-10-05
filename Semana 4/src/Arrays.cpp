@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include <ctime>
+#include <string>
 
 void preencherRandom(int *vet, int t){
     std::mt19937 gerador;
@@ -18,15 +19,16 @@ void selectionSort(int t,int* vet)
     for (size_t i = 0; i < t; ++i)
     {
         int min = vet[i];
-        for (size_t j = 1; j < t; ++j)
+        for (size_t j = i+1; j < t; ++j)
         {
             if (vet[j]<vet[i])
             {
-                min=vet[j];
-                vet[i]=vet[j];
-                vet[i]=min;
+                min=j;
             }
         }
+        int aux = vet[i];
+        vet[i]=vet[min];
+        vet[min]=aux;
     }
 }
 
@@ -53,17 +55,18 @@ void mostrar(int vet[],int t){
 }
 
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
     int tam = atoi(argv[1]);
     int vet[tam];
+    std::string word = argv[2];
     preencherRandom(vet,tam);
-    if (argv[3]=="selection")
+    if (word=="selection")
     {   
         std::cout<<"selection:"<<std::endl;
         selectionSort(tam,vet);
         mostrar(vet,tam);
-    }else if (argv[3]=="insertion")
+    }else if (word=="insertion")
     {
         std::cout<<"insertion:"<<std::endl;
         insertionSort(tam,vet);
