@@ -6,7 +6,7 @@
 void preencherRandom(int *vet, int t){
     std::mt19937 gerador;
     gerador.seed(std::time(0));
-    std::uniform_int_distribution<uint32_t> teste(1,50000);
+    std::uniform_int_distribution<uint32_t> teste(1,500);
 
     for (size_t i = 0; i < t; i++)
     {
@@ -14,21 +14,22 @@ void preencherRandom(int *vet, int t){
     }
 }
 
+void swap(int &a,int &b){
+    int aux=0;
+    aux=a;
+    a=b;
+    b=aux;
+}
+
 void selectionSort(int t,int* vet)
 {   
-    for (size_t i = 0; i < t; ++i)
-    {
-        int min = vet[i];
-        for (size_t j = i+1; j < t; ++j)
-        {
-            if (vet[j]<vet[i])
-            {
-                min=j;
-            }
-        }
-        int aux = vet[i];
-        vet[i]=vet[min];
-        vet[min]=aux;
+    int i, j, imin;
+    for(i = 0; i<t-1; i++) {
+        imin = i;
+        for(j = i+1; j<t; j++)
+         if(vet[j] < vet[imin])
+            imin = j;
+         swap(vet[i], vet[imin]);
     }
 }
 
