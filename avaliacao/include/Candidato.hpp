@@ -11,5 +11,6 @@ typedef struct
 
 }Candidato;
 
+void imprimir(Candidato c);
 
 #endif // _CANDIDATO_

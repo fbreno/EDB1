@@ -13,12 +13,12 @@ int main(int argc, char const *argv[])
     int n = contarParticipantes(dir);
     
     Candidato *c = new Candidato[n];
-
-    /*for (size_t i = 0; i < n; i++)
+    preencher(dir,c);
+    for (size_t i = 0; i < n; i++)
     {
-        c[i].setTamanho(numeroDeQuestoes);
-    }*/
-    preencher(dir);
+        imprimir(c[i]);
+    }
+    
 
     return 0;
 }

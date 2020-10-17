@@ -17,20 +17,22 @@ unsigned int contarParticipantes(string nome)
     return n;
 }
 
-void preencher(string dir,Candidato c)
+void preencher(string dir, Candidato * &c)
 {
 
     ifstream arquivo(dir);
     if (arquivo.is_open())
-    {
+    {   
+        int j=0;
         while (arquivo.good())
         {
             char respTemp[10];
-            arquivo >> c.nome;
+            arquivo >> c[j].nome;
             for (size_t i = 0; i < 10; i++)
             {
-                arquivo >> c.respostas[i];
+                arquivo >> c[j].respostas[i];
             }
+            j++;
         }
     }
 
