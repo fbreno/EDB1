@@ -1,4 +1,5 @@
 #include "funcoes.hpp"
+#include "Candidato.hpp"
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -16,7 +17,7 @@ unsigned int contarParticipantes(string nome)
     return n;
 }
 
-void preencher(string dir)
+void preencher(string dir,Candidato c)
 {
 
     ifstream arquivo(dir);
@@ -24,16 +25,12 @@ void preencher(string dir)
     {
         while (arquivo.good())
         {
-            string nomeTemp;
             char respTemp[10];
-            arquivo >> nomeTemp;
-            cout << nomeTemp;
+            arquivo >> c.nome;
             for (size_t i = 0; i < 10; i++)
             {
-                arquivo >> respTemp[i];
-                cout << " " << respTemp[i];
+                arquivo >> c.respostas[i];
             }
-            cout << endl;
         }
     }
 
