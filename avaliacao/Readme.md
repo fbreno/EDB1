@@ -7,4 +7,4 @@ O programa deve ser executado passando os argumentos:
 
 3: Quantidade para se realizar a ação
 
-4: Diretorio do gabarito
+4: Diretorio do gabarito (Extra)
