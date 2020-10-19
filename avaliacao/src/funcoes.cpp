@@ -99,9 +99,12 @@ void analisarProvas(Candidato *c, int tam, string opcao, string gabarito_dir)
     {
         c[i].pontos = contarPontos(c[i].respostas, gabarito, tam_gab);
     }
+    quickSort(c,0,tam);
+    
+
 }
 
-void swap(Candidato um, Candidato dois)
+void swap(Candidato &um, Candidato &dois)
 {
     Candidato temp = um;
     um = dois;

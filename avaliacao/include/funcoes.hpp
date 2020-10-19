@@ -6,8 +6,11 @@ using namespace std;
 
 unsigned int contarParticipantes(string nome);
 void preencher(string dir, Candidato * &c);
-int gabarito(string g);
+void gabaritoP(string dir, char *gab, int tam);
 void analisarProvas(Candidato *c, int tam,string opcao,string gabarito);
-void quickSort(int array[], int left, int right);
+int contarPontos(char *resp, char *gab, int tam);
+void swap(Candidato &um, Candidato &dois);
+void quickSort(Candidato c[], int left, int right);
+
 
 #endif // _FUNCOES_
