@@ -12,8 +12,9 @@ int main(int argc, char const *argv[])
     
     Candidato *c = new Candidato[n];
     preencher(dir,c);
-    
-    analisarProvas(c,n,opcao,gab);
+    analisarProvas(c,n,gab);
+
+    realizarOpcao(c,opcao,x,n);
     
     return 0;
 }

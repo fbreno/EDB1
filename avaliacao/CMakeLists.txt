@@ -8,6 +8,5 @@ INCLUDE_DIRECTORIES(include/)
 ADD_EXECUTABLE(
     programa
     src/main.cpp
-    src/Candidato.cpp
     src/funcoes.cpp
 )
