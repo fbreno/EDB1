@@ -317,7 +317,6 @@ void contarPiores(Candidato c[], int x, int tam)
     }
 }
 
-
 void contarBlank(Candidato c[], int x, int tam)
 {
 
