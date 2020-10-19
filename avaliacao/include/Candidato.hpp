@@ -8,9 +8,11 @@ typedef struct
 {
     string nome;
     char respostas[10];
+    int pontos;
 
 }Candidato;
 
 void imprimir(Candidato c);
+int contarPontos(char* resp, char* gab, int tam);
 
 #endif // _CANDIDATO_
